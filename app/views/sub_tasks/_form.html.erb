@@ -1,0 +1,4 @@
+<%= form_for(@task.sub_tasks.build, as: :sub_task, url: create_sub_task_path, remote: true) do |f| %>
+  <%= f.text_field :task_name, placeholder: "Sub Task" %>
+  <%= f.submit %>
+<% end %>

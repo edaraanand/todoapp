@@ -1,0 +1,6 @@
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.task %></td>
+    <td><%= link_to "Edit", edit_task_path(task), remote: true %></td>
+  </tr>
+<% end %>

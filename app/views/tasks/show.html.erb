@@ -1,0 +1,19 @@
+<div id="display-task">
+  <p>
+    <strong>Task:</strong>
+    <%= @task.task_name %>
+  </p>
+
+<div id="task-wrapper">
+  <strong> Sub Tasks </strong> <br/>
+  <div id="display-sub-tasks">
+    <%= render @task.sub_tasks %><br/>
+  </div><br/>
+  <div id="sub-task-form">
+    <% if current_user == @task.user %>
+      <%= render "sub_tasks/form" %>
+    <% end %>
+  </div>
+</div><br/>
+</div>
+<%= button_to "Back", tasks_path, method: :get%>
