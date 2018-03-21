@@ -32,8 +32,11 @@ gem 'pg', '~> 0.18.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
   gem 'pry-rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
